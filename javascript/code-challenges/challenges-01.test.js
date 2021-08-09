@@ -9,6 +9,7 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
+<<<<<<< HEAD
   let array=[];
   arr.forEach(element =>{
 
@@ -16,6 +17,14 @@ const addOne = (arr) => {
 
   });
   return array;
+=======
+//   let array = arr;
+//   array.forEach((value,idx) => {
+//     array[idx]=value+1;
+//   });
+// return array;
+//   });
+>>>>>>> a0bd19ac730207bc7676480043d0778679262d81
   // Solution code here...
 };
 
@@ -151,7 +160,7 @@ const createList = (availableItems) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-STRETCH - CHALLENGE 7
+STRETCH - CHALLENGE 7c
 
 Write a function named fizzbuzz that takes in an array of numbers.
 
