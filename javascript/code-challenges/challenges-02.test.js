@@ -28,7 +28,7 @@ Write a function named addOne that, given an array of numbers, uses map to retur
 
 const addOne = (arr) => {
   let array=[];
-  arr.map((item,idx)=>{
+  arr.map((item)=>{
     array.push(item+1);
   }
   );
@@ -43,6 +43,13 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 ------------------------------------------------------------------------------------------------ */
 
 const addQuestion = (arr) => {
+  let array=[];
+  arr.map((item)=>{
+    array.push(`${item}?`);
+  }
+  );
+  return array;
+
   // Solution code here...
 };
 
@@ -57,6 +64,16 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
+  let array=[];
+  arr.map((item)=>{
+
+    array.push (Math.pow(2, item));
+
+
+
+  }
+  );
+  return array;
   // Solution code here...
 };
 
@@ -67,6 +84,12 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
+  let array=[];
+  arr.forEach(element => {
+    array.push (Math.pow(2, element));
+
+  });
+  return array;
   // Solution code here...
 };
 
@@ -77,6 +100,17 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
+  let array=[];
+  arr.map((item)=>{
+
+    array.push (Math.pow(2, item));
+
+
+
+  }
+  );
+  return array;
+
   // Solution code here...
 };
 
