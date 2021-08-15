@@ -42,6 +42,17 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
+  arr.sort( (a, b) => {
+    if (a < b){
+      return -1;
+    } else if (a > b){
+      return 1;
+    } else {
+      return 0;
+    }
+    // return a-b;
+  });
+  return arr;
 
   // Solution code here...
 };
@@ -55,6 +66,17 @@ HINT: Beware... JS default is "Lexical" ordering.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
+  arr.sort( (a, b) => {
+    if (a < b){
+      return -1;
+    } else if (a > b){
+      return 1;
+    } else {
+      return 0;
+    }
+    // return a-b;
+  });
+  return arr;
   // Solution code here...
 };
 
@@ -67,6 +89,18 @@ HINT: Do it with a custom sort callback, not with using `.reverse()`. ;)
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
+  arr.sort( (a, b) => {
+    if (a < b){
+      return 1;
+    } else if (a > b){
+      return -1;
+    } else {
+      return 0;
+    }
+    // return a-b;
+  });
+  return arr;
+
   // Solution code here...
 };
 
@@ -81,6 +115,17 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
+  arr.sort( (a, b) => {
+    if (a < b){
+      return -1;
+    } else if (a > b){
+      return 1;
+    } else {
+      return 0;
+    }
+    // return a-b;
+  });
+  return arr;
   // Solution code here...
 };
 
@@ -98,6 +143,17 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
+  arr.sort( (a, b) => {
+    if (a.price < b.price){
+      return -1;
+    } else if (a.price > b.price){
+      return 1;
+    } else {
+      return 0;
+    }
+    // return a-b;
+  });
+  return arr;
   // Solution code here...
 };
 
