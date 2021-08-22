@@ -8,33 +8,39 @@ Write a function called sortStarWarsCharacters that sorts the characters in the 
 
 let starWarsPeople = [
   {
-    "name": "C-3PO",
-    "height": "167",
-    "eye_color": "yellow"
+    name: 'C-3PO',
+    height: '167',
+    eye_color: 'yellow',
   },
   {
-    "name": "Luke Skywalker",
-    "height": "172",
-    "eye_color": "blue"
+    name: 'Luke Skywalker',
+    height: '172',
+    eye_color: 'blue',
   },
   {
-    "name": "R2-D2",
-    "height": "96",
-    "eye_color": "red"
-  }
+    name: 'R2-D2',
+    height: '96',
+    eye_color: 'red',
+  },
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
+  starWarsArr.sort(function(a, b) {
+    return b.height - a.height;
+  });
+  return starWarsArr;
   // Solution code here...
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index. 
+Write a function named removeThree that takes an index and an array. The function should removes three items in the array starting with the value at the index.
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
+  arr.splice(idx,3);
+  return arr;
   // Solution code here...
 };
 
@@ -45,7 +51,9 @@ Write a function named joinArray that takes an array and joins all of the elemen
 ------------------------------------------------------------------------------------------------ */
 
 const joinArray = (arr) => {
-  // Solution code here...
+
+  let str = arr.join(' ');
+  return str;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,8 +71,19 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  for (let i=0; i<str.length;i++)
+  {
+
+    let srt1 = str.slice(i);
+    result.push(srt1);
+
+  }
+  result.push('');
+
   return result;
+
+  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,9 +95,16 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
+  let arr2=[];
+  for (let i=0; i<arr.length;i++)
+  {
+
+    arr2.push(arr.slice(i,i+1));
+
+  }
+  return arr2;
   // Solution code here...
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -117,12 +143,15 @@ const gruffaloCrumble = {
     'Fold together remaining ingredients to make the crisp',
     'Spread the crisp evenly over the gruffalo mixture',
     'Bake for 12-15 hours',
-  ]
+  ],
 };
-
 
 const listFoods = (recipe) => {
   let result = [];
+  recipe.ingredients.map(item =>{
+    let array = item.indexOf(' ',4);
+    result.push(item.slice(array+1,item.length));
+  });
   // Solution code here...
   return result;
 };
@@ -193,7 +222,6 @@ const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
 };
 
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
 
@@ -205,7 +233,6 @@ const totalSumCSV = (str) => {
   // Solution code here...
   return total;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 12 - Stretch Goal
@@ -246,26 +273,43 @@ Run your tests from the console: jest challenges-05.test.js
 
 describe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
-    expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
-    expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-  })
+    expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual(
+      'Luke Skywalker'
+    );
+    expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual(
+      '96'
+    );
+  });
 });
 
 describe('Testing challenge 2', () => {
   test('It should return an array with three items removed', () => {
-    expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
+    expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([
+      1, 2, 6, 7, 8,
+    ]);
   });
 });
 
 describe('Testing challenge 3', () => {
   test('It should join an array', () => {
-    expect(joinArray(['hello', '301', 'students'])).toStrictEqual('hello 301 students');
+    expect(joinArray(['hello', '301', 'students'])).toStrictEqual(
+      'hello 301 students'
+    );
   });
 });
 
 describe('Testing challenge 4', () => {
   test('It should return a list of shortening words', () => {
-    expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
+    expect(howMuchPencil('Welcome')).toStrictEqual([
+      'Welcome',
+      'elcome',
+      'lcome',
+      'come',
+      'ome',
+      'me',
+      'e',
+      '',
+    ]);
     expect(howMuchPencil('Welcome').length).toStrictEqual(8);
     expect(howMuchPencil('')).toStrictEqual(['']);
     expect(howMuchPencil('abc')).toStrictEqual(['abc', 'bc', 'c', '']);
@@ -274,29 +318,77 @@ describe('Testing challenge 4', () => {
 
 describe('Testing challenge 5', () => {
   test('It should return an array of individual letters', () => {
-    expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
+    expect(wordsToCharList('Gregor')).toStrictEqual([
+      'G',
+      'r',
+      'e',
+      'g',
+      'o',
+      'r',
+    ]);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
-    expect(wordsToCharList('hooray')).toStrictEqual(['h', 'o', 'o', 'r', 'a', 'y']);
+    expect(wordsToCharList('hooray')).toStrictEqual([
+      'h',
+      'o',
+      'o',
+      'r',
+      'a',
+      'y',
+    ]);
     expect(wordsToCharList('')).toStrictEqual([]);
   });
 });
 
 describe('Testing challenge 6', () => {
   test('It should return a list of foods', () => {
-    expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+    expect(listFoods(gruffaloCrumble)).toStrictEqual([
+      'Gruffalo',
+      'oats',
+      'brown sugar',
+      'flour',
+      'pure maple syrup',
+      'chopped nuts',
+      'baking soda',
+      'baking powder',
+      'cinnamon',
+      'melted butter',
+      'fresh water',
+    ]);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
   });
 });
 
 xdescribe('Testing challenge 7', () => {
   test('It should return a list of foods', () => {
-    expect(splitFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
+    expect(splitFoods(gruffaloCrumble)).toStrictEqual([
+      'Gruffalo',
+      'oats',
+      'brown sugar',
+      'flour',
+      'pure maple syrup',
+      'chopped nuts',
+      'baking soda',
+      'baking powder',
+      'cinnamon',
+      'melted butter',
+      'fresh water',
+    ]);
   });
 });
 
 xdescribe('Testing challenge 8', () => {
   test('It should return a list of recipe steps', () => {
-    expect(stepActions(gruffaloCrumble)).toStrictEqual(['Pre-heat', 'De-prickle', 'Sprinkle', 'Mix', 'Grease', 'Combine', 'Fold', 'Spread', 'Bake']);
+    expect(stepActions(gruffaloCrumble)).toStrictEqual([
+      'Pre-heat',
+      'De-prickle',
+      'Sprinkle',
+      'Mix',
+      'Grease',
+      'Combine',
+      'Fold',
+      'Spread',
+      'Bake',
+    ]);
     expect(stepActions(gruffaloCrumble).length).toStrictEqual(9);
   });
 });
@@ -351,6 +443,9 @@ xdescribe('Testing challenge 13', () => {
     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
     expect(extractVowels('gregor').length).toStrictEqual(2);
 
-    expect(extractVowels('The quick brown fox')).toStrictEqual(['Th qck brwn fx', 'eioou']);
+    expect(extractVowels('The quick brown fox')).toStrictEqual([
+      'Th qck brwn fx',
+      'eioou',
+    ]);
   });
 });
