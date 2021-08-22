@@ -55,17 +55,32 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
+
+  charArray.sort(function(a, b) {
+    if (a.children.length !== b.children.length)
+    {
+      return a.children.length - b.children.length;
+
+    }
+    else{
+      return a.children.name - b.children.name;
+
+    }
+  });
+  return charArray;
   // Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
+  let result = str.includes('w');
+  return result;
   // Solution code here...
 };
 
@@ -82,6 +97,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
+  let regex = /\d/g;
+  return regex.test(input);
   // Solution code here...
 };
 
@@ -93,6 +110,8 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
+  let result= input.includes('world');
+  return result;
   // Solution code here...
 };
 
@@ -105,6 +124,8 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
+  let regex=/[A-Z]\s*\w*/g;
+  return str.match(regex) ||[];
   // Solution code here...
 };
 
@@ -115,6 +136,8 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
+  let regex=/^[A-J]\w*/;
+  return arr.filter((element)=>element.match(regex));
   // Solution code here...
 };
 
@@ -207,8 +230,8 @@ describe('Testing challenge 2', () => {
   });
   test('It should return false if the input does not contain a w', () => {
     expect(containsW('hello everyone')).toBe(false);
-  })
-})
+  });
+});
 
 describe('Testing challenge 3', () => {
   test('It should return true if the input is a number', () => {
@@ -234,7 +257,7 @@ describe('Testing challenge 4', () => {
   test('It should return false if the input does not contain the word school', () => {
     expect(containsWorld('hello everyone')).toBe(false);
   });
-})
+});
 
 describe('Testing challenge 5', () => {
   test('It should only return words that begin with a capital letter', () => {
