@@ -8,6 +8,15 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
+
+
+  let d = str.split('');
+
+
+  let result = d.slice(d.length-10);
+
+
+  return result;
   // Solution code here...
 }
 
@@ -26,6 +35,14 @@ For example:
 return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
+  let maxValue=0;
+  matrix.forEach(element => {
+    element.forEach(n => {
+      if (n>maxValue) maxValue=n;
+    });
+  });
+  return maxValue;
+
   // Solution code here...
 };
 
@@ -44,6 +61,13 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
+  let sumAll=0;
+  matrix.forEach(element => {
+    element.forEach(n => {
+      sumAll +=n;
+    });
+  });
+  return sumAll;
   // Solution code here...
 };
 
@@ -71,6 +95,16 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
+
+  let arr =[];
+  for (let i = 0; i < stores[0].length; i++) {
+    let totalNum=0;
+    for (let j = 0; j < stores.length; j++) {
+      totalNum+= stores[j][i];
+    }
+    arr.push(totalNum);
+  }
+  return arr;
   // Solution code here...
 
 };
@@ -86,6 +120,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
+
+  let arr =[];
+  data.forEach((element,idx) => {
+    let item= {};
+    item['sales']=`${element} cookies`;
+    item['time']=hours[idx];
+    arr.push(item);
+  });
+  return arr;
   // Solution code here...
 };
 
@@ -111,6 +154,8 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
+  let quant =arr[2].items[1].quantity;
+  return quant;
   // Solution code here...
 };
 
@@ -323,3 +368,9 @@ xdescribe('Testing challenge 11', () => {
     expect(result[2]).toStrictEqual(27);
   });
 });
+
+
+
+
+
+
