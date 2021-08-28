@@ -166,7 +166,7 @@ Write a function named battleship that accepts a 2D array and two numbers: a row
 
 Return "hit" or "miss" depending on if there's part of a boat at that position in the array. Assume the array has only one of two values at each index. '#' for part of a boat, or ' ' for open water.
 
-Here is a sample board:
+Here is a sample b:
 [
   ['#', ' ', '#', ' '],
   ['#', ' ', '#', ' '],
@@ -174,10 +174,10 @@ Here is a sample board:
   [' ', ' ', '#', '#'],
 ]
 
-The top row of the board is considered row zero and row numbers increase as they go down.
+The top row of the b is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
-const battleship = (board, row, col) => {
+const battleship = (b, row, col) => {
   //  Solution code here...
 };
 
