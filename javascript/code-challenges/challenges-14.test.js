@@ -189,33 +189,34 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  let check = false;
-  for (let i=0; i<board.length;i++)
-  {
-    if (board[i][0] === board[i][1] && board[i][0] === board[i][2] )
-    {
-      check= true;
-      break;
-
-    }else if (board[0][i] === board[1][i] && board[0][i] === board[2][i])
-    {
-      check= true;
-      break;
+  let result = false;
+  let XandO = [
+    [0, 0, 1, 0, 2, 0],
+    [0, 1, 1, 1, 2, 1],
+    [0, 2, 1, 2, 2, 2],
+    [0, 0, 0, 1, 0, 2],
+    [1, 0, 1, 1, 1, 2],
+    [2, 0, 2, 1, 2, 2],
+    [0, 2, 1, 1, 2, 0],
+    [0, 0, 1, 1, 2, 2]
+  ];
+  const detect = (equal) => {
+    let [x1, y1, x2, y2, x3, y3] = equal;
+    if (board[y1][x1] === '' || board[y2][x2] === '' || board[y3][x3] === '') return false;
+    if (board[y1][x1] === board[y2][x2]) {
+      if (board[y2][x2] === board[y3][x3]) return true;
     }
-
-
-
-    else if (board[i][i] === board[i][i] && board[i][i] === board[i][i])
-    {
-      check= true;
-      break;
-    }
+    return false;
+  };
 
 
 
 
-  }
-  return check;
+  XandO .forEach(e => { if (detect (e)) result = true;});
+
+  return result ;
+
+
   // Solution code here...
 };
 
