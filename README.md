@@ -21,3 +21,8 @@ To run your tests
 ### 401 Data Structures, Code Challenges
 
 - Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+* ***Code Challenge 1***
+
+https://github.com/Mansoor-Kalash/data-structures-and-algorithms/tree/main/java
+
