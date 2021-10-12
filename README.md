@@ -20,9 +20,11 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+| code Challeng 401     | Link                                                            |
+| ----------------------|:---------------------------------------------------------------:|
+|  Class 1              |[array-reverse](./java/array-reverse/README.md)                  |
+|  Class 2              |[array-insert-shift](./java/array-insert-shift/README.md)        |
 
-* ***Code Challenge 1***
 
-https://github.com/Mansoor-Kalash/data-structures-and-algorithms/tree/main/java
 
+\
