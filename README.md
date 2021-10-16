@@ -20,10 +20,14 @@ To run your tests
 
 ### 401 Data Structures, Code Challenges
 
+## Language: `Java`
+
 | code Challeng 401     | Link                                                            |
 | ----------------------|:---------------------------------------------------------------:|
 |  Class 1              |[array-reverse](./java/array-reverse/README.md)                  |
 |  Class 2              |[array-insert-shift](./java/array-insert-shift/README.md)        |
+|  Class 3              |[array-binary-search](./java/array-binary-search/README.md)      |
+|  Class 4              |[linked-list](./java/linked-list/README.md)                      |
 
 
 
