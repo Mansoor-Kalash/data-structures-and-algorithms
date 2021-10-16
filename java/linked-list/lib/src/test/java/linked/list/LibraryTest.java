@@ -9,6 +9,27 @@ import static org.junit.Assert.*;
 public class LibraryTest {
     @Test public void someLibraryMethodReturnsTrue() {
         Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+//        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+  @Test public void SinglyLinkedListTest(){
+    LinkedList<Integer> singly = new LinkedList<>();
+    String empty = "{ null }";
+    assertEquals("Can successfully instantiate an empty linked list",empty,singly.toString());
+    singly.add(5);
+    assertTrue("Can properly insert into the linked list",singly.include(5));
+    singly.add(6);
+  assertEquals("The head property will properly point to the first node in the linked list",6,singly.head.value);
+  singly.add(7);
+    assertEquals("Can properly insert multiple nodes into the linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ null }"
+    ,singly.toString());
+    assertFalse("Will return true when finding a value within the linked list that exists",singly.include(6));
+assertTrue("Will return false when searching for a value in the linked list that does not exist",singly.include(8));
+assertEquals("Can properly return a collection of all the values that exist in the linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ null }",singly.toString());
+
+
+
+
+
+
+  }
 }
