@@ -12,6 +12,15 @@ LinkedList<Integer> n = new LinkedList<>();
 
     System.out.println(n.toString());
     System.out.println(n.include(7));
+    n.addAfter(6,6);
+    n.addBefore(7,6);
+    n.addLast(1);
+
+    System.out.println(n.toString());
+    int c =n.kthFromEnd(6);
+
+    System.out.println(n.kthFromEnd(7));
+
 
 
 
