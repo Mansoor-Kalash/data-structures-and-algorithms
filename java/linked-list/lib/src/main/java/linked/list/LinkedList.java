@@ -18,6 +18,23 @@ public class LinkedList<T> {
 
 size +=1;
 
+  }             1234
+  void revers (LinkedList<Integer> old){
+
+    Node l1 = old.head;
+      LinkedList<Integer> reversLinkedList= new LinkedList<>();
+      Node current = reversLinkedList.head;
+    for (int i =0;i <old.size;i++){
+
+      Node temp = current;
+     current = new Node(l1.value);
+      current.next = temp1;
+
+      l1= l1.next;
+    }
+
+
+
   }
 
 
@@ -103,6 +120,28 @@ if (current.value == value){
     }
     int value = (Integer)current.value;
     return value ;
+  }
+  public static LinkedList<Integer> zip(LinkedList<Integer> first , LinkedList<Integer> second){
+    LinkedList<T> zipList = new LinkedList<>();
+    Node current1 =  first.head;
+    Node current2 = second.head;
+
+    Node tf1 = current1.next;
+    Node ts2 = current2.next;
+//    Node temp1 =tf1;
+//      Node temp2 = ts2;
+      tf1.next = current2;
+    current2.next = tf1;
+
+    for (int i =0 ; i< first.size; i++){
+      Node temp1 =tf1;
+      Node temp2 = ts2;
+      current1.next=current2;
+      current2.next=temp1;
+      current1= current2.next;
+      current2=c
+    }
+
   }
 
   public String toString(){
