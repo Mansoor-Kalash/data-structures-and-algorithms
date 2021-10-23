@@ -72,7 +72,7 @@ if (current.value == value){
       return;
     }
     Node current = head;
-b
+
     while (current != null ) {
       if (current.next.value == before){
         Node newNode = new Node(newValue);
@@ -105,6 +105,10 @@ b
   public int kthFromEnd(int k)  {
 
     if (k >size-1){
+      System.out.println("the number is out the range");
+      return 404;
+    }
+    if (k <0){
       System.out.println("the number is out the range");
       return 404;
     }

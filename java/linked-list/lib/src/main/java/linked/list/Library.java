@@ -21,6 +21,8 @@ LinkedList<Integer> n = new LinkedList<>();
 //
 //    System.out.println(n.kthFromEnd(7));
 //add
+    System.out.println(n.kthFromEnd(3));
+
 
 
 
