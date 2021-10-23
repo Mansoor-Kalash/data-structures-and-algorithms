@@ -18,24 +18,24 @@ public class LinkedList<T> {
 
 size +=1;
 
-  }             1234
-  void revers (LinkedList<Integer> old){
-
-    Node l1 = old.head;
-      LinkedList<Integer> reversLinkedList= new LinkedList<>();
-      Node current = reversLinkedList.head;
-    for (int i =0;i <old.size;i++){
-
-      Node temp = current;
-     current = new Node(l1.value);
-      current.next = temp1;
-
-      l1= l1.next;
-    }
-
-
-
   }
+//  void revers (LinkedList<Integer> old){
+//
+//    Node l1 = old.head;
+//      LinkedList<Integer> reversLinkedList= new LinkedList<>();
+//      Node current = reversLinkedList.head;
+//    for (int i =0;i <old.size;i++){
+//
+//      Node temp = current;
+//     current = new Node(l1.value);
+//      current.next = temp1;
+//
+//      l1= l1.next;
+//    }
+
+
+
+//  }
 
 
   boolean include (T value){
@@ -48,7 +48,7 @@ if (current.value == value){
     }
     return false;
   }
-  void addLast(T value){
+  void Append(T value){
     Node current = head;
     while (current != null ) {
       if (current.next == null){
@@ -62,20 +62,20 @@ if (current.value == value){
       current=current.next;
     }
   }
-  void addBefore ( T before,T value){
+  void addBefore ( T before,T newValue){
     if (before==null){
       System.out.println("The value you want add after it, should not be null");
       return;
     }else if (head.value == before){
-      add(value);
+      add(newValue);
       size+=1;
       return;
     }
     Node current = head;
-
+b
     while (current != null ) {
       if (current.next.value == before){
-        Node newNode = new Node(value);
+        Node newNode = new Node(newValue);
         newNode.next=current.next;
         current.next = newNode;
         size+=1;
@@ -84,15 +84,16 @@ if (current.value == value){
       current=current.next;
     }
   }
-  void addAfter ( T after,T value){
-    Node current = head;
+  void addAfter ( T after,T newValeu){
     if (after==null){
       System.out.println("The value you want add after it, should not be null");
       return;
     }
+    Node current = head;
+
     while (current != null ) {
       if (current.value == after){
-        Node newNode = new Node(value);
+        Node newNode = new Node(newValeu);
         newNode.next=current.next;
         current.next = newNode;
         size+=1;
@@ -121,28 +122,28 @@ if (current.value == value){
     int value = (Integer)current.value;
     return value ;
   }
-  public static LinkedList<Integer> zip(LinkedList<Integer> first , LinkedList<Integer> second){
-    LinkedList<T> zipList = new LinkedList<>();
-    Node current1 =  first.head;
-    Node current2 = second.head;
-
-    Node tf1 = current1.next;
-    Node ts2 = current2.next;
-//    Node temp1 =tf1;
+//  public static LinkedList<Integer> zip(LinkedList<Integer> first , LinkedList<Integer> second){
+//    LinkedList<T> zipList = new LinkedList<>();
+//    Node current1 =  first.head;
+//    Node current2 = second.head;
+//
+//    Node tf1 = current1.next;
+//    Node ts2 = current2.next;
+////    Node temp1 =tf1;
+////      Node temp2 = ts2;
+//      tf1.next = current2;
+//    current2.next = tf1;
+//
+//    for (int i =0 ; i< first.size; i++){
+//      Node temp1 =tf1;
 //      Node temp2 = ts2;
-      tf1.next = current2;
-    current2.next = tf1;
-
-    for (int i =0 ; i< first.size; i++){
-      Node temp1 =tf1;
-      Node temp2 = ts2;
-      current1.next=current2;
-      current2.next=temp1;
-      current1= current2.next;
-      current2=c
-    }
-
-  }
+//      current1.next=current2;
+//      current2.next=temp1;
+//      current1= current2.next;
+//      current2=c;
+//    }
+//
+//  }
 
   public String toString(){
 Node current = head;

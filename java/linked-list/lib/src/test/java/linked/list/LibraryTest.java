@@ -22,13 +22,28 @@ public class LibraryTest {
   singly.add(7);
     assertEquals("Can properly insert multiple nodes into the linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ null }"
     ,singly.toString());
-    assertFalse("Will return true when finding a value within the linked list that exists",singly.include(6));
-assertTrue("Will return false when searching for a value in the linked list that does not exist",singly.include(8));
+    assertTrue("Will return true when finding a value within the linked list that exists",singly.include(6));
+assertFalse("Will return false when searching for a value in the linked list that does not exist",singly.include(8));
 assertEquals("Can properly return a collection of all the values that exist in the linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ null }",singly.toString());
+singly.Append(3);
 
+assertEquals("Can successfully add a node to the end of the linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ 3 } ->{ null }",singly.toString());
+    singly.Append(46);
+    singly.Append(55);
+assertEquals("Can successfully add multiple nodes to the end of a linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ null }",singly.toString());
+singly.addBefore(3,100);
+//"{ 7 } ->{ 6 } ->{ 5 } ->{ 100 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ null }"
 
+assertEquals("Can successfully insert a node before a node located i the middle of a linked list","{ 7 } ->{ 6 } ->{ 5 } ->{ 100 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ null }",singly.toString());
+singly.addBefore(7,1);
+assertEquals("Can successfully insert a node before the first node of a linked list","{ 1 } ->{ 7 } ->{ 6 } ->{ 5 } ->{ 100 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ null }",singly.toString()
+);
+singly.addAfter(100,21);
 
-
+assertEquals("Can successfully insert after a node in the middle of the linked list","{ 1 } ->{ 7 } ->{ 6 } ->{ 5 } ->{ 100 } ->{ 21 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ null }",singly.toString());
+singly.addAfter(55,11);
+assertEquals("Can successfully insert a node after the last node of the linked list","{ 1 } ->{ 7 } ->{ 6 } ->{ 5 } ->{ 100 } ->{ 21 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ 11 } ->{ null }",singly.toString()
+);
 
 
   }
