@@ -126,28 +126,29 @@ if (current.value == value){
     int value = (Integer)current.value;
     return value ;
   }
-//  public static LinkedList<Integer> zip(LinkedList<Integer> first , LinkedList<Integer> second){
-//    LinkedList<T> zipList = new LinkedList<>();
-//    Node current1 =  first.head;
-//    Node current2 = second.head;
-//
-//    Node tf1 = current1.next;
-//    Node ts2 = current2.next;
-////    Node temp1 =tf1;
-////      Node temp2 = ts2;
-//      tf1.next = current2;
-//    current2.next = tf1;
-//
-//    for (int i =0 ; i< first.size; i++){
-//      Node temp1 =tf1;
-//      Node temp2 = ts2;
-//      current1.next=current2;
-//      current2.next=temp1;
-//      current1= current2.next;
-//      current2=c;
-//    }
-//
-//  }
+  public  LinkedList<Integer> zip(LinkedList<Integer> first , LinkedList<Integer> second) {
+    LinkedList<Integer> zipList = new LinkedList<>();
+    Node currntFirst = first.head;
+    Node currentSecond = second.head;
+//Node currentZipList = zipList.head;
+    while (currntFirst != null || currentSecond != null) {
+      if (currntFirst != null) {
+        currentZipList.value = currntFirst.value;
+        currntFirst = currntFirst.next;
+        currentZipList= currentZipList.next;
+      }
+      if (currentSecond != null) {
+        currentZipList.value = currentSecond.value;
+        currntFirst = currentSecond.next;
+        currentZipList= currentZipList.next;
+      }
+    }
+    currentZipList.next = null;
+    return zipList;
+  }
+
+
+
 
   public String toString(){
 Node current = head;
