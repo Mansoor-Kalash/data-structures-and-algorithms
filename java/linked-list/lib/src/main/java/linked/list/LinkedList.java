@@ -72,7 +72,7 @@ if (current.value == value){
       return;
     }
     Node current = head;
-b
+
     while (current != null ) {
       if (current.next.value == before){
         Node newNode = new Node(newValue);
