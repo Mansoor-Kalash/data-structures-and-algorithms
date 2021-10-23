@@ -4,7 +4,7 @@
 
 * ***LinkedList***
 
-![whightboard](LinkedList2.png)
+![whightboard](linkedList2.png)
 
 
 Singly Linked List
