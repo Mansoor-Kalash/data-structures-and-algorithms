@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6380cf6d-e3e9-46f9-9ffc-370be66a2c18" name="Changes" comment="" />
+    <list default="true" id="6380cf6d-e3e9-46f9-9ffc-370be66a2c18" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/LinkedList.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +33,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634996136355</updated>
       <workItem from="1634996139749" duration="10000" />
+      <workItem from="1635014814858" duration="6000" />
     </task>
     <servers />
   </component>
