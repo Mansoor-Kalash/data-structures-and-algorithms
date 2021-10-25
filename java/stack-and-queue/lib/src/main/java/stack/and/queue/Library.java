@@ -3,6 +3,8 @@
  */
 package stack.and.queue;
 
+import org.checkerframework.checker.units.qual.A;
+
 public class Library {
   public static void main(String[] args) {
 Stack <Integer> v = new Stack<>();
@@ -19,6 +21,13 @@ Stack <Integer> v = new Stack<>();
     Queue<Integer> n = new Queue<>();
     n.enqueue(1);
     System.out.println(n.dequeue());
+Queue cat = new AnimalShelter();
+cat.enqueue("cat");
+    System.out.println(cat.dequeue());
+
+//cat.dequeue();
+//    System.out.println("ssssssss"+cat.toString());
 
   }
+
 }
