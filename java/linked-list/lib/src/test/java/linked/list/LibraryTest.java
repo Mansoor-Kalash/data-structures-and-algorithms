@@ -44,7 +44,15 @@ assertEquals("Can successfully insert after a node in the middle of the linked l
 singly.addAfter(55,11);
 assertEquals("Can successfully insert a node after the last node of the linked list","{ 1 } ->{ 7 } ->{ 6 } ->{ 5 } ->{ 100 } ->{ 21 } ->{ 3 } ->{ 46 } ->{ 55 } ->{ 11 } ->{ null }",singly.toString()
 );
+assertEquals("Where k is greater than the length of the linked list",404,singly.kthFromEnd(20));
+assertEquals("Where k and the length of the list are the same",404,singly.kthFromEnd(singly.size));
+assertEquals("Where k is not a positive integer",404,singly.kthFromEnd(-2));
 
 
+LinkedList<Integer> size1 = new LinkedList<>();
+size1.add(1);
+assertEquals("Where the linked list is of a size 1",1,size1.kthFromEnd(0));
+
+assertEquals("where k is not at the end, but somewhere in the middle of the linked list",3,singly.kthFromEnd(3));
   }
 }

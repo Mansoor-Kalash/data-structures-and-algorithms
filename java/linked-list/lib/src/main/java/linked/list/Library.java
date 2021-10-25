@@ -21,6 +21,21 @@ LinkedList<Integer> n = new LinkedList<>();
 //
 //    System.out.println(n.kthFromEnd(7));
 //add
+    System.out.println(n.kthFromEnd(3));
+    LinkedList<Integer> first = new LinkedList<>();
+    first.add(3);
+    first.add(3);
+    first.add(3);
+
+    LinkedList<Integer> second = new LinkedList<>();
+    first.add(10);
+    first.add(10);
+    first.add(10);
+
+
+    System.out.println(second.zip(first,second));
+
+
 
 
 

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="6380cf6d-e3e9-46f9-9ffc-370be66a2c18" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/linked-list/lib/src/main/java/linked/list/LinkedList.java" afterDir="false" />
+=======
     <list default="true" id="9bff1fac-a1b7-45fb-b2b6-1ebe67d53f98" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/linked-list/lib/bin/main/linked/list/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/linked-list/lib/bin/main/linked/list/Library.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/linked-list/lib/bin/main/linked/list/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/linked-list/lib/bin/main/linked/list/LinkedList.class" afterDir="false" />
+>>>>>>> 23bd3e78d31c2b826cb733dc1eadaff55f0f8d80
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +19,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="1zuRlK97KGKV69jPV8iJA5ryja6" />
+=======
   <component name="ProjectId" id="1zu5F6rNH8rOZftE6QTvlmhjeSo" />
+>>>>>>> 23bd3e78d31c2b826cb733dc1eadaff55f0f8d80
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,12 +37,22 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="6380cf6d-e3e9-46f9-9ffc-370be66a2c18" name="Changes" comment="" />
+      <created>1634996136355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634996136355</updated>
+      <workItem from="1634996139749" duration="10000" />
+      <workItem from="1635014814858" duration="6000" />
+=======
       <changelist id="9bff1fac-a1b7-45fb-b2b6-1ebe67d53f98" name="Changes" comment="" />
       <created>1634985026125</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634985026125</updated>
       <workItem from="1634985028598" duration="16000" />
+>>>>>>> 23bd3e78d31c2b826cb733dc1eadaff55f0f8d80
     </task>
     <servers />
   </component>
