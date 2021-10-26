@@ -56,13 +56,10 @@ public class LibraryTest {
 
 
 
-
-
-
-
-
-
-
-
+    }
+    @Test public void testBracket (){
+      assertTrue(Bracket.validateBrackets("{dd[ddd]}"));
+      assertFalse(Bracket.validateBrackets("{dd[[[ddd]])}"));
+      assertEquals(false,Bracket.validateBrackets("[{()}}"));
     }
 }
