@@ -1,44 +1,30 @@
-# Stacks and Queues
+# Bracket
 
-***Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle.***
 
-***Queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.***
+epresenting whether or not the brackets in the string are balanced.
 
 ## Challenge
 
-***Stack and a Queue Implementation***
-
-**create tow classes Stack and Queue and create these methode:
-### Stack class
-
-1. push.
-2. pop.
-3. peek.
-4. isEmpty.
-
-### Queue Class 
-
-1. enqueue.
-2. dequeue.
-3. peek.
-4. isEmpty.
+create a function accept a string and return true if the brackets in the string are balanced
+and return false if is not balanced.
 
 
+### Bracket class
+**Method**
+1. validateBrackets.
+
+![Bracket](Bracket.png)
 ## Approach & Efficiency
 
-can create instance empty object in each class. can check if the stack or queue is empty by isEmpty method.
-can push multi value.
-Big O time & space for all method in tow pranch big O(1).
+method is statec can access it direct from class. can check if the brackets are balanced in string.
+Big O time is O(n) and for the space is (1).
+
 
 ## API
-
+validateBrackets: check if the string have a balanced brackets or not
+retun true if balanced and false if not.
 push : add value to last postion in stack.
-remove : remove from the top of stack.
-peack : return the valur inside the top,
-isEmpty : Returns: Boolean indicating whether or not the stack is empty.
-dequeue : remove the first value insid queue.
-peek:return the value inside the top,
-is empty: check id is empty return null if rlse return fale.
+
 
 
 
