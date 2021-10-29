@@ -4,12 +4,13 @@ do enqueue and dequeue like queue by using a two stack.
 
 ## Challenge
 
-create a clase name pseudoQueue work like queue have two method:
+do enqueue & queue bu using two stack.
 
 1. enqueue
 2. dequeue
 
-
+## White Board
+![](pseudo.png)
 ## Approach & Efficiency
 
 can create instance empty object.
