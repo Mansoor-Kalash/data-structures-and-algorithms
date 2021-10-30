@@ -10,7 +10,8 @@
 |  Class 6              |[linked-list](./linked-list/README.md)                           |
 |  Class 7              |[linked-list](./linked-list/README.md)                           |
 |  Class 10             |[stack-and-queue](./stack-and-queue/README.md)                   |
-|  Class 11             |[stack-and-queue](./stack-and-queue/README.md)                   |
+|  Class 11             |[stack-queue-pseudo](./stack-and-queue/README.md)                |
+|  Class 12             |[stack-queue-animal-shelter](./stack-and-queue/README.md)        |
 
 
 
