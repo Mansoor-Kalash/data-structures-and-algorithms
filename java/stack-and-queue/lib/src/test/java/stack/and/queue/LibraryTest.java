@@ -57,6 +57,7 @@ public class LibraryTest {
 
 
     }
+
     @Test public void testPseudo(){
       PseudoQueue queueStack = new PseudoQueue();
       assertEquals("dequeue when the stack is empty","the stack is empty",queueStack.dequeue());
@@ -65,6 +66,7 @@ public class LibraryTest {
       queueStack.enqueue(1);
       assertEquals("FIFO","4",queueStack.dequeue());
       assertEquals("FIFO","3",queueStack.dequeue());
+
 
 
     }

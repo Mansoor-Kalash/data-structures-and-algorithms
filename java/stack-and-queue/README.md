@@ -1,3 +1,4 @@
+
 # stack-queue-pseudo
 
 do enqueue and dequeue like queue by using a two stack.
@@ -18,11 +19,7 @@ can push multi value.
 Big O time O(n) & space big O(1).
 
 ## API
-
-dequeue : add value to First postion in stack.
-dequeue : remove the first value insid queue.
-
-
+do emqueue and dequeue (FIFO)
 
 
 
