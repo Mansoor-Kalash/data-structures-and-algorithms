@@ -1,9 +1,13 @@
+
 # Animal Shulter
 
 ***Accept just Animal Instance of Cat or Dog.***
 
+
+
 ***use Queue for storage the animal(FIFO).***
 ## Challenge
+
 
 create AnimalShulter class have to method that accept Animal but should be
 instance of cat or dog to enqueue or dqeueue if the string is cat or dog.
@@ -30,6 +34,8 @@ instance of cat or dog to enqueue or dqeueue if the string is cat or dog.
 
 * name
 
+
+![Bracket](Bracket.png)
 ## Approach & Efficiency
 
 can create instance empty object in each class. if dequeue and the queue is empty will return the queue is emmpty.
@@ -43,6 +49,7 @@ Big O time O(1) & space O(1).
 enqueue: add Animal to the rear of the queue.
 dequeue: remove first Animal enqueue to the queue.
 lastAnimalIn: return the rear value in the queue
+
 
 
 

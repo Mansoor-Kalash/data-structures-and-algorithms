@@ -70,5 +70,13 @@ public class LibraryTest {
 shelter.dequeue("dog");
       assertTrue("dequeue when the sulter is empty",shelter.dequeue("dog") == "the queue is empty");
 
+
+
+    }
+    @Test public void testBracket (){
+      assertTrue(Bracket.validateBrackets("{dd[ddd]}"));
+      assertFalse(Bracket.validateBrackets("{dd[[[ddd]])}"));
+      assertEquals(false,Bracket.validateBrackets("[{()}}"));
+
     }
 }
