@@ -24,11 +24,20 @@ To run your tests
 
 | code Challeng 401     | Link                                                            |
 | ----------------------|:---------------------------------------------------------------:|
+| code Challeng 401     | Link                                                            |
+| ----------------------|:---------------------------------------------------------------:|
 |  Class 1              |[array-reverse](./java/array-reverse/README.md)                  |
 |  Class 2              |[array-insert-shift](./java/array-insert-shift/README.md)        |
 |  Class 3              |[array-binary-search](./java/array-binary-search/README.md)      |
 |  Class 4              |[linked-list](./java/linked-list/README.md)                      |
+|  Class 5              |[linked-list](./java/linked-list/README.md)                      |
+|  Class 6              |[linked-list](./java/linked-list/README.md)                      |
+|  Class 7              |[linked-list](./java/linked-list/README.md)                      |
+|  Class 10             |[stack-and-queue](./java/stack-and-queue/README.md)              |
+|  Class 11             |[stack-queue-pseudo](./java/stack-and-queue/README.md)           |
+|  Class 12             |[stack-queue-animal-shelter](./java/stack-and-queue/README.md)   |
+|  Class 13             |[stack-queue-brackets](./java/stack-and-queue/README.md)         |
 
 
 
-\
+
