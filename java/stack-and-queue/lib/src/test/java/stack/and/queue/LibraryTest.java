@@ -55,14 +55,20 @@ public class LibraryTest {
       assertEquals("Calling dequeue or peek on empty queue raises exception","the queue is empty",emptyQueue.dequeue());
 
 
-
-
-
-
-
-
-
-
+    }
+    @Test public void testAnimalShulter(){
+      Animal cat = new Cat("CAT","meme");
+      Animal dog = new Dog("dog","pochy");
+      Animal lion = new Animal("lion","semba");
+      AnimalShelter shelter = new AnimalShelter();
+      shelter.enqueue(cat);
+      shelter.enqueue(dog);
+      shelter.enqueue(lion);
+      assertEquals("last animal go to shulter should be dog","dog",shelter.lstAnimalIn());
+      assertEquals("dequeue lion from Animal Shulter",null,shelter.dequeue("lion"));
+      assertTrue("dequeue dog or cat from anima shulter",shelter.dequeue("cat")=="cat"||shelter.dequeue("cat")=="dog");
+shelter.dequeue("dog");
+      assertTrue("dequeue when the sulter is empty",shelter.dequeue("dog") == "the queue is empty");
 
     }
 }

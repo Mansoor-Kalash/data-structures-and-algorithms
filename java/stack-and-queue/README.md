@@ -1,44 +1,49 @@
-# Stacks and Queues
+# Animal Shulter
 
-***Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle.***
+***Accept just Animal Instance of Cat or Dog.***
 
-***Queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.***
-
+***use Queue for storage the animal(FIFO).***
 ## Challenge
 
-***Stack and a Queue Implementation***
+create AnimalShulter class have to method that accept Animal but should be
+instance of cat or dog to enqueue or dqeueue if the string is cat or dog.
 
-**create tow classes Stack and Queue and create these methode:
-### Stack class
+## WhiteBoard
 
-1. push.
-2. pop.
-3. peek.
-4. isEmpty.
+![](AnimalShulter.png)
 
-### Queue Class 
+### AnimalShulter Class
 
-1. enqueue.
-2. dequeue.
-3. peek.
-4. isEmpty.
+1.**enqueue**
+2. **dequeue**
+3. **lastAnimalIn**
 
+### Animal Class
+**prosperity**
+1. animalType
+2. name
+## Cat Class extend Animal
+**prosperity**
+
+* name
+## Dog Class extend Animal
+
+* name
 
 ## Approach & Efficiency
 
-can create instance empty object in each class. can check if the stack or queue is empty by isEmpty method.
+can create instance empty object in each class. if dequeue and the queue is empty will return the queue is emmpty.
 can push multi value.
-Big O time & space for all method in tow pranch big O(1).
+
+enqueue Big O time O(1) & space O(n).
+
+Big O time O(1) & space O(1).
 
 ## API
+enqueue: add Animal to the rear of the queue.
+dequeue: remove first Animal enqueue to the queue.
+lastAnimalIn: return the rear value in the queue
 
-push : add value to last postion in stack.
-remove : remove from the top of stack.
-peack : return the valur inside the top,
-isEmpty : Returns: Boolean indicating whether or not the stack is empty.
-dequeue : remove the first value insid queue.
-peek:return the value inside the top,
-is empty: check id is empty return null if rlse return fale.
 
 
 
