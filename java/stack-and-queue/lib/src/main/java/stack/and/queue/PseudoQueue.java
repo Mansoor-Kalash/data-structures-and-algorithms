@@ -16,11 +16,15 @@ public class  PseudoQueue<T> {
     }
 
   }
-  public void dequeue() {
+  public String dequeue() {
+    String output = "";
+
     if (stack2.isEmpty()){
-      System.out.println("the queue is empty");
+      System.out.println("the stack is empty");
+      return "the stack is empty";
     }else{
-      stack2.pop();
+      output = stack2.pop();
+
     }
     if (stack2.isEmpty()) {
       while (!stack1.isEmpty()) {
@@ -29,6 +33,9 @@ public class  PseudoQueue<T> {
         stack1.pop();
       }
     }
+
+return output;
+
   }
 
   @Override

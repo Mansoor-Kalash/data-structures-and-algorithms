@@ -21,14 +21,15 @@ newNode.next=top;
 top=newNode;
   }
 
-  public void pop (){
+  public String pop (){
     if (isEmpty()){
       System.out.println("the stack is empty");
-      return;
+      return "the stack is empty";
     }
     Node current = top;
     top = top.next;
     current.next=null;
+    return current.value.toString();
   }
   public Integer getMax(){
 

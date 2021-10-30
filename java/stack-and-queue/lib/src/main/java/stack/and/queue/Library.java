@@ -6,34 +6,35 @@ package stack.and.queue;
 public class Library {
   public static void main(String[] args) {
 Stack <Integer> v = new Stack<>();
-//    System.out.println(v.isEmpty());
-//    System.out.println(v.peak());
+    System.out.println(v.isEmpty());
+    System.out.println(v.peak());
     v.push(6);
     v.push(5);
-//    System.out.println(v.peak());
+    System.out.println(v.peak());
     v.pop();
     v.pop();
     v.pop();
-//    String s ="rrrr";
-//    s.l
+
 
     System.out.println(v.peak());
     Queue <Integer> n = new Queue<>();
     n.enqueue(1);
     System.out.println(n.dequeue());
-//
+
     PseudoQueue<Integer> ss = new PseudoQueue<Integer>();
     ss.enqueue(5);
     ss.enqueue(4);
     System.out.println(ss.toString());
-ss.dequeue();
+
+    System.out.println(ss.dequeue());
+
     System.out.println(ss.toString());
 
-//    Stack<Integer> stack = new Stack<>();
-//    stack.push(5);
-//    stack.push(3);
-//    stack.push(9);
-//    System.out.println(stack.getMax());
+    Stack<Integer> stack = new Stack<>();
+    stack.push(5);
+    stack.push(3);
+    stack.push(9);
+    System.out.println(stack.getMax());
   }
 }
 
