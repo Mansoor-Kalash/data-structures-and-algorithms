@@ -16,8 +16,9 @@ public class App {
       System.out.println(n);
     }
     System.out.println(tree.Contains(1));
-    System.out.println(tree.preOrder(tree.getRoot()));
+//    System.out.println(tree.preOrder(tree.getRoot()));
     tree.add(8);
+    System.out.println(tree.treeMax());
   }
 
 }
