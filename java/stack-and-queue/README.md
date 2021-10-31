@@ -1,48 +1,34 @@
-# Animal Shulter
 
-***Accept just Animal Instance of Cat or Dog.***
+# Bracket
 
-***use Queue for storage the animal(FIFO).***
+
+epresenting whether or not the brackets in the string are balanced.
+
+
+
 ## Challenge
 
-create AnimalShulter class have to method that accept Animal but should be
-instance of cat or dog to enqueue or dqeueue if the string is cat or dog.
+create a function accept a string and return true if the brackets in the string are balanced
+and return false if is not balanced.
 
-## WhiteBoard
 
-![](AnimalShulter.png)
+### Bracket class
+**Method**
+1. validateBrackets.
 
-### AnimalShulter Class
 
-1.**enqueue**
-2. **dequeue**
-3. **lastAnimalIn**
-
-### Animal Class
-**prosperity**
-1. animalType
-2. name
-## Cat Class extend Animal
-**prosperity**
-
-* name
-## Dog Class extend Animal
-
-* name
-
+![Bracket](Bracket.png)
 ## Approach & Efficiency
 
-can create instance empty object in each class. if dequeue and the queue is empty will return the queue is emmpty.
-can push multi value.
+method is statec can access it direct from class. can check if the brackets are balanced in string.
+Big O time is O(n) and for the space is (1).
 
-enqueue Big O time O(1) & space O(n).
-
-Big O time O(1) & space O(1).
 
 ## API
-enqueue: add Animal to the rear of the queue.
-dequeue: remove first Animal enqueue to the queue.
-lastAnimalIn: return the rear value in the queue
+validateBrackets: check if the string have a balanced brackets or not
+retun true if balanced and false if not.
+push : add value to last postion in stack.
+
 
 
 
