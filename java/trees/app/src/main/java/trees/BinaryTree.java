@@ -68,5 +68,26 @@ return preOrderTree;
 
     return preOrderTree;
   }
+  public int treeMax () {
+
+    Node current = getRoot();
+try {
+
+
+    while (current.right != null) {
+
+      current = current.right;
+
+    }
+  return (int)current.value;
+
+
+}catch (Exception e){
+  System.out.println("the tree is empty");
+  e.getMessage();
+}
+
+    return (int)current.value;
+  }
 
   }

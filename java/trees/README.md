@@ -4,28 +4,17 @@
 
 ## Challenge
 
-### Create a Binary Tree class
+***create method that return the maximum number in the tree.***
 
-include a method for each of the depth first traversals:
+## WhiteBoard
 
-1. pre order: returns an array of the values, ordered appropriately.
-2. in order: returns an array of the values, ordered appropriately.
-3. post order:  returns an array of the values, ordered appropriately.
-
-### Create a Binary Search Tree class
-
-This class should be a sub-class of the Binary Tree Class, include methods:
-
-1. Add: Adds a new node with that value in the correct location in the binary search tree.
-2. Contains: Returns boolean indicating whether or not the value is in the tree at least once.
+![max-tree](max-tree.png)
 
 ## Approach & Efficiency
-1. Can successfully instantiate an empty tree.
-2. Can successfully instantiate a tree with a single root node.
-3. Can successfully add a left child and right child to a single root node
-4. Can successfully return a collection from a preorder traversal
-5. Can successfully return a collection from an inorder traversal
-6. Can successfully return a collection from a postorder traversal
+can fet the maximum number even if the tree have just a root.
+have an Exception if the tree is empty
+Time Big O is O(1).
+Space Big O is O(1);
 
 Big O
 preOrder: time O(1) , Space O(n)
