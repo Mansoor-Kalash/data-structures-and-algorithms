@@ -5,6 +5,10 @@ package trees;
 
 public class App {
   public static void main(String[] args) {
-
+    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+    tree.add(9);
+    tree.add(10);
+//    tree.add(8);
   }
+
 }
