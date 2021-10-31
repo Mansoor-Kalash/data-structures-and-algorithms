@@ -12,6 +12,8 @@
 |  Class 10             |[stack-and-queue](./stack-and-queue/README.md)                   |
 |  Class 11             |[stack-queue-pseudo](./stack-and-queue/README.md)                |
 |  Class 12             |[stack-queue-animal-shelter](./stack-and-queue/README.md)        |
+|  Class 15             |[trees](./trees/README.md)                                       |
+
 
 
 
