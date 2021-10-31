@@ -10,24 +10,12 @@
 
 ![max-tree](max-tree.png)
 
+
 ## Approach & Efficiency
 can fet the maximum number even if the tree have just a root.
 have an Exception if the tree is empty
-Time Big O is O(1).
-Space Big O is O(1);
-
-Big O
-preOrder: time O(1) , Space O(n)
-inOrder: time O(1), Space O(n)
-postOrder: time O(1), Space O(n)
-add : time O(n), Space O(1)
-contains: time O(n), Space O(1)
-
-
+Time Big O is O(n).
+Space Big O is O(1).
 
 ## API
-preOrder: return an array list of value for tree as root => left => right
-inOrder: return an array list of value for tree as left » root » right
-postOrder: return an array list of value for tree as left » right » root
-add : accept value then add the value in the correct location in the binary search tree.
-contains: accept value and check if it exist will return true else false.
+maxTree: no input return integer number represent the maximum number in the tree.
