@@ -21,14 +21,22 @@ Stack <Integer> v = new Stack<>();
     Queue<Integer> n = new Queue<>();
     n.enqueue(1);
     System.out.println(n.dequeue());
-Queue cat = new AnimalShelter();
-cat.enqueue("cat");
-    System.out.println(cat.dequeue());
+Animal cat = new Cat("CAT","meme");
+Animal dog = new Dog("dog","pochy");
+Animal lion = new Animal("lion","semba");
+
+
+AnimalShelter shelter = new AnimalShelter();
+shelter.enqueue(cat);
+shelter.enqueue(dog);
+shelter.enqueue(lion);
+    System.out.println(shelter.lstAnimalIn());
+
 
 //cat.dequeue();
 //    System.out.println("ssssssss"+cat.toString());
 
-    System.out.println(Bracket.validateBrackets("{{jhgjg}}"));
+
   }
 
 }
