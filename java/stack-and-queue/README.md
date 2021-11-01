@@ -11,6 +11,9 @@ instance of cat or dog to enqueue or dqeueue if the string is cat or dog.
 ## WhiteBoard
 
 ![](AnimalShulter.png)
+## visua in detail
+
+![](visual.png)
 
 ### AnimalShulter Class
 
