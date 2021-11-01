@@ -6,6 +6,12 @@ epresenting whether or not the brackets in the string are balanced.
 
 
 
+![](AnimalShulter.png)
+## visua in detail
+
+![](visual.png)
+
+
 ## Challenge
 
 create a function accept a string and return true if the brackets in the string are balanced
