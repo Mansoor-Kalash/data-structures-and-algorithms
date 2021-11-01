@@ -14,6 +14,11 @@ and return false if is not balanced.
 1. validateBrackets.
 
 ![Bracket](Bracket.png)
+
+## visual 
+
+![viual](visualbraket.png)
+
 ## Approach & Efficiency
 
 method is statec can access it direct from class. can check if the brackets are balanced in string.
