@@ -3,6 +3,7 @@
  */
 package trees;
 
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -53,4 +54,5 @@ assertTrue(tree.treeMax() == 15);
 
       tree.treeMax();
     }
+
 }

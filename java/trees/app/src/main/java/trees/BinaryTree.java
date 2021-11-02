@@ -1,6 +1,8 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public abstract class BinaryTree<T> {
   private Node root;
@@ -34,39 +36,39 @@ public abstract class BinaryTree<T> {
 return preOrderTree;
   }
   public ArrayList<T> InOrder(Node root) {
-    ArrayList<T> preOrderTree = new ArrayList<T>();
-    try {
+    ArrayList<T> InOrderTree = new ArrayList<T>();
+
+    try{
       if (root != null) {
-        preOrder(root.getLeft());
-        preOrderTree.add((T) root.getValue());
-
-        preOrder(root.getRight());
-
+        InOrderTree.addAll(InOrder(root.getLeft()));
+        InOrderTree.add((T) root.value);
+        InOrderTree.addAll(InOrder(root.getRight()));
       }
     }catch (Exception e){
-      System.out.println("error when got InOrder");
+      System.out.println("error in InOrder ");
       e.getMessage();
     }
 
-    return preOrderTree;
+
+    return InOrderTree;
   }
   public ArrayList<T> postOrder(Node root) {
-    ArrayList<T> preOrderTree = new ArrayList<T>();
+    ArrayList<T> postOrderTree = new ArrayList<T>();
 
-    try {
+    try{
       if (root != null) {
-        preOrder(root.getLeft());
-        preOrder(root.getRight());
-        preOrderTree.add((T)root.getValue());
-
+        postOrderTree.addAll(postOrder(root.getLeft()));
+        postOrderTree.addAll(postOrder(root.getRight()));
+        postOrderTree.add((T) root.value);
 
       }
     }catch (Exception e){
-      System.out.println("error when get post Order");
+      System.out.println("error in postOrder ");
       e.getMessage();
     }
 
-    return preOrderTree;
+
+    return postOrderTree;
   }
   public int treeMax () {
 
@@ -89,5 +91,22 @@ try {
 
     return (int)current.value;
   }
+public ArrayList<T> breadthFirst(Node root){
+    ArrayList<T> breadth = new ArrayList<>();
+  Queue<Node> queue = new LinkedList<>();
+  queue.add(root);
+  while (!queue.isEmpty()) {
+    Node element = queue.remove();
+    breadth.add((T)element.value);
+    if (element.left != null) {
+      queue.add(element.left);
+    }
+    if (element.right != null) {
+      queue.add(element.right);
+    }
+  }
+
+return breadth;
+}
 
   }
