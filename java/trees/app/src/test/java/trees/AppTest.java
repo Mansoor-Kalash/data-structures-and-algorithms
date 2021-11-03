@@ -3,6 +3,7 @@
  */
 package trees;
 
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -32,4 +33,26 @@ assertFalse("Can successfully return a collection from a preorder traversal",tre
       assertFalse("Can successfully return a collection from a postorder traversal",tree.postOrder(tree.getRoot()).isEmpty());
 
     }
+    @Test public void testGetMax(){
+      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+tree.add(10);
+tree.add(13);
+tree.add(1);
+tree.add(9);
+tree.add(15);
+tree.add(12);
+assertTrue(tree.treeMax() == 15);
+      BinarySearchTree<Integer> treeHaveJustRoot = new BinarySearchTree<>();
+      treeHaveJustRoot.add(1);
+      assertTrue(treeHaveJustRoot.treeMax() == 1);
+
+
+    }
+    @Test(expected=NullPointerException.class)
+  public void testTreeMaxFailure(){
+      BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+
+      tree.treeMax();
+    }
+
 }
