@@ -69,6 +69,8 @@ return preOrderTree;
 
 
     return postOrderTree;
+
+
   }
   public int treeMax () {
 
@@ -90,6 +92,7 @@ try {
 }
 
     return (int)current.value;
+
   }
 public ArrayList<T> breadthFirst(Node root){
     ArrayList<T> breadth = new ArrayList<>();
