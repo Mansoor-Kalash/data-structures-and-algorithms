@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public abstract class BinaryTree<T> {
+public  class BinaryTree<T> {
   private Node root;
 
   public BinaryTree() {
@@ -104,9 +104,11 @@ public ArrayList<T> breadthFirst(Node root){
     if (element.right != null) {
       queue.add(element.right);
     }
+
   }
 
 return breadth;
 }
+
 
   }

@@ -38,3 +38,36 @@ Space Big O is O(1).
 
 ## API
 maxTree: no input return integer number represent the maximum number in the tree.
+
+## Challenge
+
+***create method that replace each node value in the KaryTree if divisible by 3, replace the value with “Fizz”
+ If the value is divisible by 5, replace the value with “Buzz”
+ If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+If the value is not divisible by 3 or 5, simply turn the number into a String.***
+
+
+
+## WhiteBoard
+
+![fizzBuzz](fizzBuzz.png)
+
+### vizual
+![fizzBuzz](visualfizzbuzz.png)
+
+
+## API
+fizzBuzz:  Tree, return Tree as string  get the all element in tree replace the value with fizz, Buzz, FizzBuzz based in the condition
+ if not able in condition return the number as a string and return tree in the same sequence.
+
+
+## Approach & Efficiency
+replace all value without change the structure. keep all node in the same postion.
+
+have an Exception if the tree is empty
+Time Big O is O(n^2).
+Space Big O is O(n).
+
+## API
+maxTree: input Tree  output is Tree evry node with string value and the same postion.
+
