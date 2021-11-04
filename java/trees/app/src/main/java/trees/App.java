@@ -16,8 +16,22 @@ public class App {
       System.out.println(n);
     }
     System.out.println(tree.Contains(1));
-    System.out.println(tree.preOrder(tree.getRoot()));
-    tree.add(8);
+    System.out.println(tree.InOrder(tree.getRoot()));
+//    tree.add(8);
+ArrayList<Integer> expectedInOrder = new ArrayList<>();
+expectedInOrder.add(10);
+    expectedInOrder.add(40);
+    expectedInOrder.add(50);
+    if(expectedInOrder == tree.InOrder(tree.getRoot())){
+      System.out.println("yes");
+    }else{
+      System.out.println("no");
+      System.out.println(expectedInOrder);
+      System.out.println(tree.postOrder(tree.getRoot()));
+    }
+
+
   }
+
 
 }

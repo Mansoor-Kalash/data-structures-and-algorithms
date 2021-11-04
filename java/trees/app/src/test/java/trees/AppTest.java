@@ -16,20 +16,33 @@ public class AppTest {
     }
     @Test public void testTrees(){
       BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-      ArrayList<Integer> tset = new ArrayList<>();
-assertEquals("Can successfully instantiate an empty tree",tset,tree.preOrder(tree.getRoot()));
+      ArrayList<Integer> tsetExpectedPreOrder = new ArrayList<>();
+      ArrayList<Integer> tsetExpectedInOrder = new ArrayList<>();
+      ArrayList<Integer> tsetExpectedPostOrder = new ArrayList<>();
+// InOrder Expected
+      tsetExpectedInOrder.add(10);
+      tsetExpectedInOrder.add(40);
+      tsetExpectedInOrder.add(50);
+// postOrder Expected
+
+      tsetExpectedPostOrder.add(10);
+      tsetExpectedPostOrder.add(50);
+      tsetExpectedPostOrder.add(40);
+
+      assertEquals("Can successfully instantiate an empty tree",tsetExpectedPreOrder,tree.preOrder(tree.getRoot()));
       tree.add(40);
-      tset.add(40);
-      assertEquals("Can successfully instantiate a tree with a single root node",tset,tree.preOrder(tree.getRoot()));
+      tsetExpectedPreOrder.add(40);
+      assertEquals("Can successfully instantiate a tree with a single root node",tsetExpectedPreOrder,tree.preOrder(tree.getRoot()));
 
       tree.add(50);
       tree.add(10);
-      tset.add(10);
-      tset.add(50);
-      assertEquals("Can successfully add a left child and right child to a single root node",tset,tree.preOrder(tree.getRoot()));
-assertFalse("Can successfully return a collection from a preorder traversal",tree.preOrder(tree.getRoot()).isEmpty());
-      assertFalse("Can successfully return a collection from an inorder traversal",tree.InOrder(tree.getRoot()).isEmpty());
-      assertFalse("Can successfully return a collection from a postorder traversal",tree.postOrder(tree.getRoot()).isEmpty());
+      tsetExpectedPreOrder.add(10);
+      tsetExpectedPreOrder.add(50);
+      assertEquals("Can successfully add a left child and right child to a single root node",tsetExpectedPreOrder,tree.preOrder(tree.getRoot()));
+assertEquals(tsetExpectedPreOrder,tree.preOrder(tree.getRoot()));//Can successfully return a collection from a preorder traversal
+      assertEquals(tsetExpectedInOrder,tree.InOrder(tree.getRoot()));//Can successfully return a collection from an inorder traversal
+
+      assertEquals(tsetExpectedPostOrder,tree.postOrder(tree.getRoot()));//Can successfully return a collection from a postorder traversal
 
     }
 }
