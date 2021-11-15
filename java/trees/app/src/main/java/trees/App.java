@@ -4,17 +4,54 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class App {
   public static void main(String[] args) {
-    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-    tree.add(40);
-    tree.add(50);
-    tree.add(10);
-    ArrayList<Integer> i = tree.preOrder(tree.getRoot());
-    for (Integer n :i){
-      System.out.println(n);
+//    BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+//    tree.add(40);
+//    tree.add(50);
+//    tree.add(10);
+//    ArrayList<Integer> i = tree.preOrder(tree.getRoot());
+//    for (Integer n :i){
+//      System.out.println(n);
+//    }
+//    System.out.println(tree.Contains(1));
+//    System.out.println(tree.preOrder(tree.getRoot()));
+//    tree.add(8);
+//    System.out.println(tree.treeMax());
+//    tree.add(15);
+//    tree.add(3);
+//    ArrayList<Integer> breadth = tree.breadthFirst(tree.getRoot());
+//    for (Integer n :breadth){
+//      System.out.println(n);
+//    }
+
+
+    Tree tree1 = new Tree();
+    KNode a = new KNode(1);
+    KNode b = new KNode(2);
+    KNode c = new KNode(3);
+
+    tree1.addRoot(15);
+    tree1.root.addChild(a);
+    a.addChild(b);
+    tree1.root.addChild(c);
+
+    Tree t = tree1.fizzBuss(tree1);
+    Queue<KNode> breadth = new LinkedList<>();
+    breadth.add(t.root);
+
+    while (breadth.peek() != null) {
+      KNode front = breadth.remove();
+      System.out.println(front.info.toString());
+      for (int i = 0; i < front.children.size(); i++) {
+        breadth.add((KNode) front.children.get(i));
+
+      }
     }
+
     System.out.println(tree.Contains(1));
     System.out.println(tree.InOrder(tree.getRoot()));
 //    tree.add(8);
@@ -34,4 +71,11 @@ expectedInOrder.add(10);
   }
 
 
+
+
+  }
+
 }
+
+
+
