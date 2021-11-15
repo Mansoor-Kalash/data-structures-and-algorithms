@@ -15,6 +15,9 @@
 |  Class 13             |[stack-queue-brackets](./stack-and-queue/README.md)              |
 |  Class 15             |[trees](./trees/README.md)                                       |
 |  Class 16             |[Max-tree](./trees/README.md)                                    |
+|  Class 15             |[trees](./isertionSort/README.md)                                |
+]
+
 
 
 
