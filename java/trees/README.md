@@ -4,41 +4,70 @@
 
 ## Challenge
 
-### Create a Binary Tree class
+**get all value in the tree by breadth first (all element raw by raw from first element in the lift to last element in the right in eash raw in the tree)**
 
-include a method for each of the depth first traversals:
+## WhiteBoard
 
-1. pre order: returns an array of the values, ordered appropriately.
-2. in order: returns an array of the values, ordered appropriately.
-3. post order:  returns an array of the values, ordered appropriately.
-
-### Create a Binary Search Tree class
-
-This class should be a sub-class of the Binary Tree Class, include methods:
-
-1. Add: Adds a new node with that value in the correct location in the binary search tree.
-2. Contains: Returns boolean indicating whether or not the value is in the tree at least once.
+![breadth](breadth.png)
 
 ## Approach & Efficiency
-1. Can successfully instantiate an empty tree.
-2. Can successfully instantiate a tree with a single root node.
-3. Can successfully add a left child and right child to a single root node
-4. Can successfully return a collection from a preorder traversal
-5. Can successfully return a collection from an inorder traversal
-6. Can successfully return a collection from a postorder traversal
 
-Big O
-preOrder: time O(1) , Space O(n)
-inOrder: time O(1), Space O(n)
-postOrder: time O(1), Space O(n)
-add : time O(n), Space O(1)
-contains: time O(n), Space O(1)
+can get all element in the tree.
+get all element raw by raw frome left to right
+Time Big O is O(n)
+Space Big O is O(n)
 
+
+## Challenge
+
+***create method that return the maximum number in the tree.***
+
+
+## WhiteBoard
+![max-tree](max-tree.png)
+
+## API
+breadthFirst:  input is Node Type Should be root in the tee. return integer ArrayList get the all element in tree presented in breadth first.
+
+
+## Approach & Efficiency
+can fet the maximum number even if the tree have just a root.
+have an Exception if the tree is empty
+Time Big O is O(n).
+Space Big O is O(1).
+
+## API
+maxTree: no input return integer number represent the maximum number in the tree.
+
+## Challenge
+
+***create method that replace each node value in the KaryTree if divisible by 3, replace the value with “Fizz”
+ If the value is divisible by 5, replace the value with “Buzz”
+ If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+If the value is not divisible by 3 or 5, simply turn the number into a String.***
+
+
+
+## WhiteBoard
+
+![fizzBuzz](fizzBuzz.png)
+
+### vizual
+![fizzBuzz](visualfizzbuzz.png)
 
 
 ## API
-preOrder: return an array list of value for tree as root => left => right
-inOrder: return an array list of value for tree as left » root » right
-postOrder: return an array list of value for tree as left » right » root
-add : accept value then add the value in the correct location in the binary search tree.
-contains: accept value and check if it exist will return true else false.
+fizzBuzz:  Tree, return Tree as string  get the all element in tree replace the value with fizz, Buzz, FizzBuzz based in the condition
+ if not able in condition return the number as a string and return tree in the same sequence.
+
+
+## Approach & Efficiency
+replace all value without change the structure. keep all node in the same postion.
+
+have an Exception if the tree is empty
+Time Big O is O(n^2).
+Space Big O is O(n).
+
+## API
+maxTree: input Tree  output is Tree evry node with string value and the same postion.
+
