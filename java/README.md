@@ -15,6 +15,7 @@
 |  Class 15             |[trees](./trees/README.md)                                       |
 |  Class 26             |[Isertion Sort](./isertionSort/README.md)                        |
 |  Class 27             |[merge-sort](./merge-sort/README.md)                             |
+|  Class 28             |[quick-sort](./quick-sort/README.md)                             |
 
 
 
