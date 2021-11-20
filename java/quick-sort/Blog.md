@@ -1,71 +1,58 @@
-## stepping through Reverse-sorted
+# Quick Sort
 
-[20, 18, 12, 8, 5, -2]
+take an array then divid it .
 
-[-2, 18, 12, 8, 5, 20]
-
-[-2, 18, 12, 8, 5, 20]
-
-[-2, 18, 12, 8, 5, 20]
-
-[-2, 5, 12, 8, 18, 20]
-
-[-2, 5, 12, 8, 18, 20]
-
-[-2, 5, 12, 8, 18, 20]
-
-[-2, 5, 8, 12, 18, 20]
-
-[-2, 5, 8, 12, 18, 20]
-
-[-2, 5, 8, 12, 18, 20]
-
-[-2, 5, 8, 12, 18, 20]
-
-[-2, 5, 8, 12, 18, 20]
+quick sort its take one elemant and make it a pivot element then move all less elemnt to the left and all the highest elemat to the right and repit it until the array sorted
 
 
-## stepping through Few uniques
+## Pseudocode
 
-[5, 12, 7, 5, 5, 7]
+ALGORITHM QuickSort(arr, left, right)
+    if left < right
+        // Partition the array by setting the position of the pivot value
+        DEFINE position <-- Partition(arr, left, right)
+        // Sort the left
+        QuickSort(arr, left, position - 1)
+        // Sort the right
+        QuickSort(arr, position + 1, right)
 
-[5, 5, 5, 7, 7, 12]
+ALGORITHM Partition(arr, left, right)
+    // set a pivot value as a point of reference
+    DEFINE pivot <-- arr[right]
+    // create a variable to track the largest index of numbers lower than the defined pivot
+    DEFINE low <-- left - 1
+    for i <- left to right do
+        if arr[i] <= pivot
+            low++
+            Swap(arr, i, low)
 
-[5, 5, 5, 7, 7, 12]
+     // place the value of the pivot location in the middle.
+     // all numbers smaller than the pivot are on the left, larger on the right.
+     Swap(arr, right, low + 1)
+    // return the pivot index point
+     return low + 1
 
-[5, 5, 5, 7, 7, 12]
+ALGORITHM Swap(arr, i, low)
+    DEFINE temp;
+    temp <-- arr[i]
+    arr[i] <-- arr[low]
+    arr[low] <-- temp
 
-[5, 5, 5, 7, 7, 12]
 
-[5, 5, 5, 7, 7, 12]
+## Trace
+Array: [8,4,23,42,16,15]
 
-[5, 5, 5, 7, 7, 12]
+Pass 1 :
+take on element and make it as a pivot element 
 
-[5, 5, 5, 7, 7, 12]
+pass 2 : 
+divid the array into half and sort it for two groups less then pivot and highse then pivot 
 
-[5, 5, 5, 7, 7, 12]
+pass 3 : 
+do the same thing for the divided arrays 
 
-[5, 5, 5, 7, 7, 12]
+pass 4 : 
 
-## stepping through Nearly-sorted
+repit it until i have a sorted array
 
-[2, 3, 5, 7, 13, 11]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
-[2, 3, 5, 7, 11, 13]
-
+![](quickSortBlog.png)
