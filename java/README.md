@@ -17,6 +17,9 @@
 |  Class 26             |[Isertion Sort](./isertionSort/README.md)                        |
 |  Class 27             |[merge-sort](./merge-sort/README.md)                             |
 |  Class 28             |[quick-sort](./quick-sort/README.md)                             |
+|  Class 30             |[Hash Table](./hashtable/README.md)                              |
+|  Class 31             |[repeated word](./hashmap-repeated-word/README.md)               |
+
 
 
 
