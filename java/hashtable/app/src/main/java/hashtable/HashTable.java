@@ -48,6 +48,25 @@ return    Math.abs(hash) % this.bucket.length;
     return null;
   }
 
+  public ArrayList<ArrayList<String>>  leftJoin(HashTable<String> synonym, HashTable<String> antonyms){
+    ArrayList<ArrayList<String>> d2 = new ArrayList<>();
+    ArrayList<String>d1 = new ArrayList<>();
+    synonym.
+   for (LinkedList<Node<String>> f: synonym.bucket){
+     for (Node n : f){
+
+     }
+     if(f.getFirst().value != null){
+       d1.add(f.getFirst().key.toString());
+       d1.add(synonym.get(f.getFirst().key.toString()));
+//       d1.add(antonyms.get(f.getFirst().key.toString()));
+       d2.add(d1);
+     }
+
+    }
+   return d2;
+  }
+
   public boolean contains(String key){
     int index = hash(key);
 
