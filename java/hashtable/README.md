@@ -43,3 +43,26 @@ Implement a Hashtable with the following methods:
 * hash() method contain Arguments key and returns Index in the collection for that key.
 * isEmpty() to check if the array is empty or not,Return Boolean
 
+-------------------------------------------------------------
+
+### Challenge 33
+# Hashmap LEFT JOIN
+
+Implement a simplified LEFT JOIN for two Hashmaps.
+
+## Challenge
+
+Write a function that LEFT JOINs two hashmaps into a single data structure.
+
+## Approach & Efficiency
+
+the big O notation of the function is :
+time complexity = O(n)
+space complexity = O(n)
+
+## API
+takes two hashMap as parameters, Looping over them and return  an array contain the matched key with the value of it.
+
+## Solution
+
+![leftJoin](leftjoin.png)

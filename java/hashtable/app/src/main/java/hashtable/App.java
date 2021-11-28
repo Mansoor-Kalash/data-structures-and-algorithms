@@ -28,20 +28,20 @@ public class App {
 //      System.out.println(
 //        "\n"+ h.hash("ASAC")
 //      );
-      HashTable<String> Hash1 = new HashTable<>();
-      HashTable<String> Hash2 = new HashTable<>();
-      Hash1.add("fond", "enamored");
-      Hash1.add("wrath", "anger");
-      Hash1.add("diligent", "employed");
-      Hash1.add("outfit", "garb");
-      Hash1.add("guide", "usher");
-
-      Hash2.add("fond", "averse");
-      Hash2.add("wrath", "delight");
-      Hash2.add("diligent", "idle");
-      Hash2.add("guide", "follow");
-      Hash2.add("flow", "jam");
-      ArrayList<ArrayList<String>> list =Hash1.leftJoin(Hash1,Hash2);
-      System.out.println(list);
+//      HashTable<String> Hash1 = new HashTable<>();
+//      HashTable<String> Hash2 = new HashTable<>();
+//      Hash1.add("fond", "enamored");
+//      Hash1.add("wrath", "anger");
+//      Hash1.add("diligent", "employed");
+//      Hash1.add("outfit", "garb");
+//      Hash1.add("guide", "usher");
+//
+//      Hash2.add("fond", "averse");
+//      Hash2.add("wrath", "delight");
+//      Hash2.add("diligent", "idle");
+//      Hash2.add("guide", "follow");
+//      Hash2.add("flow", "jam");
+//      ArrayList<ArrayList<String>> list =Hash1.leftJoin(Hash1,Hash2);
+//      System.out.println(list);
     }
 }

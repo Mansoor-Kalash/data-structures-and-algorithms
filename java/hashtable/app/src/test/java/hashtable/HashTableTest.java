@@ -5,6 +5,10 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class HashTableTest extends TestCase {
 @Test
   public void testAdd() {
@@ -70,4 +74,53 @@ public class HashTableTest extends TestCase {
     assertTrue("Should return true", hashTable.contains("ASAC"));
 
   }
-}
+
+
+  @Test public void testHashMapLeftJoin(){
+    HashMap<String,String> hashmap1 = new HashMap<>();
+    HashMap<String,String> hashmap2 = new HashMap<>();
+
+    hashmap1.put("fond","enamored");
+    hashmap1.put("wrath","anger");
+    hashmap1.put("diligent","employed");
+
+
+    hashmap2.put("fond","averse");
+    hashmap2.put("wrath","delight");
+    hashmap2.put("diligent","idle");
+
+
+    // trying the happy path
+
+    assertEquals("[diligent: employed , idle\n" + ", wrath: anger , delight\n" + ", fond: enamored , averse\n" + "]", HashTable.leftJoin(hashmap1,hashmap2).toString());
+
+
+
+
+    hashmap1.put("outfit","garb");
+    hashmap1.put("guide","usher");
+
+    hashmap2.put("guide","follow");
+    hashmap2.put("flow","jam");
+
+
+
+    hashmap1.put("outfit","garb");
+    hashmap1.put("guide","usher");
+
+    hashmap2.put("guide","follow");
+    hashmap2.put("flow","jam");
+
+
+    // some data in the first is not in the second and the opposite
+
+    assertEquals("[diligent: employed , idle\n" +
+      ", outfit: garb , Null\n" +
+      ", wrath: anger , delight\n" +
+      ", guide: usher , follow\n" +
+      ", fond: enamored , averse\n" +
+      "]", HashTable.leftJoin(hashmap1,hashmap2).toString());
+  }
+
+
+  }
