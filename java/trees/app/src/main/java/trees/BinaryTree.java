@@ -1,8 +1,10 @@
 package trees;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public abstract class BinaryTree<T> {
+public  class BinaryTree<T> {
   private Node root;
 
   public BinaryTree() {
@@ -67,6 +69,49 @@ return preOrderTree;
 
 
     return postOrderTree;
+
+
   }
+  public int treeMax () {
+
+    Node current = getRoot();
+try {
+
+
+    while (current.right != null) {
+
+      current = current.right;
+
+    }
+  return (int)current.value;
+
+
+}catch (Exception e){
+  System.out.println("the tree is empty");
+  e.getMessage();
+}
+
+    return (int)current.value;
+
+  }
+public ArrayList<T> breadthFirst(Node root){
+    ArrayList<T> breadth = new ArrayList<>();
+  Queue<Node> queue = new LinkedList<>();
+  queue.add(root);
+  while (!queue.isEmpty()) {
+    Node element = queue.remove();
+    breadth.add((T)element.value);
+    if (element.left != null) {
+      queue.add(element.left);
+    }
+    if (element.right != null) {
+      queue.add(element.right);
+    }
+
+  }
+
+return breadth;
+}
+
 
   }
