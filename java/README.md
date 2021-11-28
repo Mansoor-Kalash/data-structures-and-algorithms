@@ -20,9 +20,8 @@
 |  Class 30             |[Hash Table](./hashtable/README.md)                              |
 |  Class 31             |[repeated word](./hashmap-repeated-word/README.md)               |
 |  Class 32             |[tree-intersection](./tree-intersection/README.md)               |
+|  Class 33             |[left join](./hashtable/README.md)                               |
 |  Class 35             |[graph](./graph/README.md)                                       |
-
-
 
 
 
