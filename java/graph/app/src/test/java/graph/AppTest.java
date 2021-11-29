@@ -73,5 +73,68 @@ public class AppTest {
     Graph<String> empty = new Graph<>();
 
     assertNull(empty.getNodes());
+
+
+    Graph<String> graph2 = new Graph<>();
+
+
+    Node<String> a = graph2.addNode("M");
+    Node<String> b =  graph2.addNode("A");
+    Node<String> c = graph2.addNode("L");
+    Node<String> d = graph2.addNode("I");
+    Node<String> e = graph2.addNode("K");
+
+    graph2.addEdge(a,b,true);
+    graph2.addEdge(b,c,true);
+    graph2.addEdge(c,d,true);
+    graph2.addEdge(d,e,true);
+    graph2.addEdge(e,e,true);
+
+
+    List<Node<String>> result = new ArrayList<>();
+    result.add(a);
+    result.add(b);
+    result.add(c);
+    result.add(d);
+    result.add(e);
+
+
+    assertEquals(result,graph2.breadthFirst(a));
+  }
+
+  @Test
+  public void breadthFirstTest(){
+
+    Graph<String> graph2 = new Graph<>();
+
+
+    Node<String> a = graph2.addNode("cat");
+    Node<String> b =  graph2.addNode("camel");
+    Node<String> c = graph2.addNode("dog");
+    Node<String> d = graph2.addNode("lion");
+    Node<String> e = graph2.addNode("tiger");
+
+    graph2.addEdge(a,b,true);
+    graph2.addEdge(b,c,true);
+    graph2.addEdge(c,d,true);
+    graph2.addEdge(d,e,true);
+    graph2.addEdge(e,e,true);
+
+
+    List<Node<String>> result = new ArrayList<>();
+    result.add(a);
+    result.add(b);
+    result.add(c);
+    result.add(d);
+    result.add(e);
+
+
+    assertEquals(result,graph2.breadthFirst(a));
+}
+
+  @Test(expected = NullPointerException.class)
+  public void test_emptyDFS(){
+    Graph graph = new Graph();
+    graph.breadthFirst(null);
   }
 }
