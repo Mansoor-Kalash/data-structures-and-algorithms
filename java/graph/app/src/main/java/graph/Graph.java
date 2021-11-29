@@ -48,6 +48,37 @@ public class Graph<T> {
 
 
   }
+  public List<Node<T>> breadthFirst(Node<T> root) {
+    List<Node<T>> list = new ArrayList<>();
+    Set<Node<T>> visitedNode = new HashSet<>();
+    List<Node<T>> queue = new ArrayList<>();
+
+    queue.add(root);
+    visitedNode.add(root);
+
+    while (!queue.isEmpty()) {
+
+      Node<T> front = queue.get(0);
+      queue.remove(0);
+      list.add(front);
+
+      for (int i = 0; i < graph.get(front).size(); i++) {
+
+        if (!visitedNode.contains(graph.get(front).get(i))) {
+
+          visitedNode.add(graph.get(front).get(i));
+          queue.add(graph.get(front).get(i));
+        }
+      }
+
+    }
+    for (int i = 0; i < list.size(); i++) {
+
+      System.out.println(list.get(i).value);
+    }
+    return list;
+  }
+
 
   public int getSize(){
     return graph.size();

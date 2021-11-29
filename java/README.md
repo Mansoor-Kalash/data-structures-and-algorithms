@@ -22,6 +22,8 @@
 |  Class 32             |[tree-intersection](./tree-intersection/README.md)               |
 |  Class 33             |[left join](./hashtable/README.md)                               |
 |  Class 35             |[graph](./graph/README.md)                                       |
+|  Class 36             |[ graph-breadth-first](./graph/README.md)                        |
+
 
 
 
