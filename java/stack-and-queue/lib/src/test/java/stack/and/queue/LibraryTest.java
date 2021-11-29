@@ -55,6 +55,7 @@ public class LibraryTest {
       assertEquals("Calling dequeue or peek on empty queue raises exception","the queue is empty",emptyQueue.dequeue());
 
 
+
     }
     @Test public void testAnimalShulter(){
       Animal cat = new Cat("CAT","meme");
@@ -69,6 +70,14 @@ public class LibraryTest {
       assertTrue("dequeue dog or cat from anima shulter",shelter.dequeue("cat")=="cat"||shelter.dequeue("cat")=="dog");
 shelter.dequeue("dog");
       assertTrue("dequeue when the sulter is empty",shelter.dequeue("dog") == "the queue is empty");
+
+
+
+    }
+    @Test public void testBracket (){
+      assertTrue(Bracket.validateBrackets("{dd[ddd]}"));
+      assertFalse(Bracket.validateBrackets("{dd[[[ddd]])}"));
+      assertEquals(false,Bracket.validateBrackets("[{()}}"));
 
     }
 }
