@@ -20,6 +20,8 @@
 |  Class 31             |[repeated word](./hashmap-repeated-word/README.md)               |
 |  Class 32             |[tree-intersection](./tree-intersection/README.md)               |
 |  Class 35             |[graph](./graph/README.md)                                       |
+|  Class 36             |[ graph-breadth-first](./graph/README.md)                        |
+
 
 
 
