@@ -137,4 +137,42 @@ public class AppTest {
     Graph graph = new Graph();
     graph.breadthFirst(null);
   }
+  @Test
+  public void cityTrip(){
+    Graph<String> graph = new Graph<>();
+
+    graph.addNode("Ibrahim");
+    graph.addNode("Qaed");
+    graph.addNode("Ali");
+    graph.addNode("Ahmad");
+    graph.addNode("Osama");
+    graph.addNode("Omar");
+    graph.addEdge("Ibrahim" , "Ali", 15);
+    graph.addEdge("Ibrahim" , "Omar", 60 );
+    graph.addEdge("Osama" , "Ali", 14);
+    graph.addEdge("Omar" , "Ahmad", 30);
+
+    List<String> list= new ArrayList<>();
+    list.add("Ibrahim");
+    list.add("Omar");
+    list.add("Ahmad");
+
+    assertEquals(90 , graph.citiesTrip(graph, list));
+
+    List<String> list2= new ArrayList<>();
+    list2.add("Osama");
+    list2.add("Ahmad");
+    assertEquals(0 , graph.citiesTrip(graph , list2));
+
+    List<String> list3= new ArrayList<>();
+    list3.add("Omar");
+    list3.add("Ali");
+    list3.add("Ibrahim");
+
+    assertEquals(15 , graph.citiesTrip(graph, list3));
+
+
+//    assertEquals( 0, graph.citiesTrip(graph , list4));
+  }
+
 }
