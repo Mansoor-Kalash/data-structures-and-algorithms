@@ -22,4 +22,28 @@ public class App {
       System.out.println(graph1.getNodes());
       System.out.println(graph1.getNeighbors(node1).toString());
     }
+//  public Integer businessTrip(Graph graph, List<String> cities){
+//    totalCost = 0;
+//    int citiesSize = cities.size();
+//
+//    for (int i = 0; i < citiesSize; i ++){
+//      if (i + 1 >= citiesSize){
+//        break;
+//      }
+//      helperTrip(cities.get(i), cities.get(i + 1), graph);
+//    }
+//
+//    return totalCost;
+//  }
+//
+//  private void helperTrip(String city1, String city2, Graph graph){
+//    if (graph.getNeighbors(city1) == null){
+//      return;
+//    }
+//    for (Node vertex: graph.getNeighbors(city1)) {
+//      if (Objects.equals(city2, vertex.label)){
+//        totalCost += vertex.weight;
+//        break;
+//      }
+//    }
 }
